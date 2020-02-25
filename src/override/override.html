@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+    <title>New Tab</title>
+	<!-- using inline styles (temporarily?) for performance ⚡️-->
+	<style>
+		#clock {
+			/* center vertically and horizontally
+			TODO: Check compatibility w/ older chrome versions!!
+			 */
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-moz-transform: translateX(-50%) translateY(-50%);
+			-webkit-transform: translateX(-50%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
+
+			/* use system fonts */
+			font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 12em;
+		}
+	</style>
 </head>
 <body>
-new tab
+<div id="clock"></div>
+
 </body>
+<script src="override.js"></script>
 </html>

@@ -1,6 +1,5 @@
-// SAMPLE
 this.manifest = {
-    "name": "My Extension",
+    "name": "Velocity",
     "icon": "icon.png",
     "settings": [
         {
