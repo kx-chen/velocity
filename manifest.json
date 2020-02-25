@@ -26,6 +26,7 @@
     "newtab": "src/override/override.html"
   },
   "permissions": [
-    "tabs"
+    "tabs",
+    "storage"
   ]
 }
