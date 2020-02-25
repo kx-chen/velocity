@@ -1,18 +1,60 @@
-function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
+function initPage() {
+    doTimeCount();
+    initClockcount(doTimeCount);
+
+    setMessageUnderClock()
+}
+
+function setMessageUnderClock() {
+    // TODO: add to locales instead of string
+    let message = "Hello.";
+    const hours = getCurrentTime()[0];
+
+
+    // TODO: do something else other than this to handle weird cases
+    // TODO: add into translatable text!!
+    if(hours > 24) {
+        message = "Have a good day."
+    } else if (hours >= 18) {
+        message = "Good evening."
+    } else if (hours < 6) {
+        message = "Have a good night."
+    } else if (hours >= 12) {
+        message = "Good afternoon."
+    } else if (hours >= 6) {
+        message = "Good morning."
+    }
+
+    document.getElementById("message-under-clock").innerHTML = message;
+}
+
+
+function getCurrentTime() {
+    const today = new Date();
+    const h = today.getHours();
+    let m = today.getMinutes();
     m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('clock').innerHTML =
-        h + ":" + m;
-    var t = setTimeout(startTime, 500);
+
+    return [h, m];
+}
+
+// TODO: better naming
+function doTimeCount() {
+    let time = getCurrentTime();
+    setTimeOnPage(time);
 }
 
 function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    if (i < 10) {i = "0" + i}  // add zero in front of numbers < 10
     return i;
+}
+
+function setTimeOnPage(time) {
+    document.getElementById('clock').innerHTML =  time[0] + ":" + time[1];
+}
+
+function initClockcount(startCount) {
+    setTimeout(startCount, 500);
 }
 
 function ready(fn) {
@@ -23,4 +65,4 @@ function ready(fn) {
     }
 }
 
-ready(startTime());
+ready(initPage());
