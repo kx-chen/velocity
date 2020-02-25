@@ -1,8 +1,11 @@
 function initPage() {
-    doTimeCount();
-    initClockcount(doTimeCount);
-
+    initClock();
     setMessageUnderClock()
+}
+
+function initClock() {
+    doTimeCount();
+    setTimeout(initClock, 500);
 }
 
 function setMessageUnderClock() {
@@ -53,9 +56,6 @@ function setTimeOnPage(time) {
     document.getElementById('clock').innerHTML =  time[0] + ":" + time[1];
 }
 
-function initClockcount(startCount) {
-    setTimeout(startCount, 500);
-}
 
 function ready(fn) {
     if (document.readyState !== 'loading'){
