@@ -65,4 +65,4 @@ function ready(fn) {
     }
 }
 
-ready(initPage());
+ready(initPage);
