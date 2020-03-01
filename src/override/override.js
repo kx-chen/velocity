@@ -1,8 +1,14 @@
+// use functional paradigm 
 function initPage() {
     initClock();
     setMessageUnderClock();
+
+    setTimeout(fadeInBackground, 100);
 }
 
+function fadeInBackground() {
+    document.getElementById("body-wrapper").style.display = "block";
+}
 function initClock() {
     doTimeCount();
     setTimeout(initClock, 500);
@@ -24,7 +30,7 @@ function setMessageUnderClock() {
         message = "Good morning"
     }
 
-    // message += ", Kai.";
+    message += ".";
 
     document.getElementById("message-under-clock").innerHTML = message;
 }
