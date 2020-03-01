@@ -1,6 +1,5 @@
-// use functional paradigm 
 function initPage() {
-    initClock();
+    startClock();
     setMessageUnderClock();
 
     setTimeout(fadeInBackground, 100);
@@ -9,9 +8,10 @@ function initPage() {
 function fadeInBackground() {
     document.getElementById("body-wrapper").style.display = "block";
 }
-function initClock() {
+
+function startClock() {
     doTimeCount();
-    setTimeout(initClock, 500);
+    setTimeout(startClock, 500);
 }
 
 function setMessageUnderClock() {
@@ -46,8 +46,7 @@ function getCurrentTime() {
 }
 
 function doTimeCount() {
-    let time = getCurrentTime();
-    setTimeOnPage(time);
+    setTimeOnPage(getCurrentTime());
 }
 
 function checkTime(i) {
