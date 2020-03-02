@@ -3,6 +3,11 @@ function initPage() {
     setMessageUnderClock();
 
     setTimeout(fadeInBackground, 100);
+    document.getElementById("settings-cog").addEventListener("click", openSettingsMenu);
+}
+
+function openSettingsMenu(e) {
+    alert("settings");
 }
 
 function fadeInBackground() {

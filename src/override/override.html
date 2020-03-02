@@ -52,8 +52,25 @@
         }
 
         body {
+            color: white;
             margin: 0;
             background-color: #515151;
+        }
+
+        .left-bottom {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .right-bottom {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        #settings-cog {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -63,6 +80,15 @@
         <div id="clock"></div>
         <div id="message-under-clock"></div>
     </div>
+
+    <div class="left-bottom">
+        <a id="settings-cog"><img
+            src="../../icons/settings-24px.svg"
+            alt="Settings"
+            height="35"
+            width="35" /></a>
+    </div>
+<!--    <div class="right-bottom">Settings</div>-->
 </div>
 
 </body>
