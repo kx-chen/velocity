@@ -6,6 +6,8 @@ function initPage() {
   document
     .getElementById("settings-cog")
     .addEventListener("click", openSettingsMenu);
+
+  document.getElementById("name").addEventListener("keydown", nameSubmitted);
 }
 
 function openSettingsMenu(e) {
@@ -67,9 +69,17 @@ function checkTime(i) {
 function setTimeOnPage(time) {
   setMessageUnderClock();
 
-  if (parseInt(document.getElementById("minute").innerHTML) !== time[1]) {
+  if (
+    parseInt(document.getElementById("minute").innerHTML) !== parseInt(time[1])
+  ) {
     document.getElementById("hour").innerHTML = time[0];
     document.getElementById("minute").innerHTML = time[1];
+  }
+}
+
+function nameSubmitted(e) {
+  if (e.key === "Enter") {
+    console.log("name submitted entered");
   }
 }
 

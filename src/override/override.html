@@ -83,11 +83,47 @@
         position: relative;
         top: -0.08em;
       }
+
+      input[type="text"] {
+        background: transparent;
+        border: none;
+        border-bottom: 4px solid white;
+        caret-color: white;
+        text-align: center;
+        font-size: 1em;
+        color: white;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus,
+      button:focus {
+        outline: none;
+      }
+
+      #name {
+        height: 50px;
+        width: 80%;
+      }
+
+      #name-form {
+        display: none;
+        font-size: 4em;
+        text-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+      }
+
+      #name {
+        padding-top: 30px;
+      }
     </style>
   </head>
   <body>
     <div id="body-wrapper">
       <div id="clock-wrapper">
+        <div id="name-form">
+          <label class="name-label" for="name">Hi. What's your name?</label>
+          <input type="text" id="name" autocomplete="off" autofocus />
+        </div>
         <div id="clock"><span id="hour"></span><span id="minute"></span></div>
         <div id="message-under-clock"></div>
       </div>
