@@ -39,7 +39,9 @@ function setMessageUnderClock() {
 
   message += ".";
 
-  document.getElementById("message-under-clock").innerHTML = message;
+  if(document.getElementById("message-under-clock").innerHTML !== message) {
+    document.getElementById("message-under-clock").innerHTML= message;
+  }
 }
 
 function getCurrentTime() {
@@ -64,6 +66,12 @@ function checkTime(i) {
 
 function setTimeOnPage(time) {
   document.getElementById("clock").innerHTML = time[0] + ":" + time[1];
+  setMessageUnderClock();
+
+  let formattedTime = time[0] + ":" + time[1];
+  if(document.getElementById("clock").innerHTML !== formattedTime) {
+    document.getElementById("clock").innerHTML= formattedTime;
+  }
 }
 
 function ready(fn) {
