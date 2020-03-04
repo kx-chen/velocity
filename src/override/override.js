@@ -67,8 +67,7 @@ function checkTime(i) {
 function setTimeOnPage(time) {
   setMessageUnderClock();
 
-  let formattedTime = time[0] + ":" + time[1];
-  if (document.getElementById("minute").innerHTML !== time[1]) {
+  if (parseInt(document.getElementById("minute").innerHTML) !== time[1]) {
     document.getElementById("hour").innerHTML = time[0];
     document.getElementById("minute").innerHTML = time[1];
   }
