@@ -8,6 +8,16 @@ function initPage() {
     .addEventListener("click", openSettingsMenu);
 
   document.getElementById("name").addEventListener("keydown", nameSubmitted);
+
+  promptUserForNameIfNeeded();
+}
+
+function promptUserForNameIfNeeded() {
+  if (localStorage.getItem("name") == null) {
+    document.getElementById("name-form").style.display = "block";
+    document.getElementById("clock").style.display = "none";
+    document.getElementById("message-under-clock").style.display = "none";
+  }
 }
 
 function openSettingsMenu(e) {
@@ -39,7 +49,7 @@ function setMessageUnderClock() {
     message = "Good morning";
   }
 
-  message += ".";
+  message += ", " + localStorage.getItem("name") + ".";
 
   if (document.getElementById("message-under-clock").innerHTML !== message) {
     document.getElementById("message-under-clock").innerHTML = message;
@@ -79,7 +89,10 @@ function setTimeOnPage(time) {
 
 function nameSubmitted(e) {
   if (e.key === "Enter") {
-    console.log("name submitted entered");
+    localStorage.setItem("name", e.srcElement.value);
+    document.getElementById("name-form").style.display = "none";
+    document.getElementById("clock").style.display = "block";
+    document.getElementById("message-under-clock").style.display = "block";
   }
 }
 
