@@ -39,8 +39,8 @@ function setMessageUnderClock() {
 
   message += ".";
 
-  if(document.getElementById("message-under-clock").innerHTML !== message) {
-    document.getElementById("message-under-clock").innerHTML= message;
+  if (document.getElementById("message-under-clock").innerHTML !== message) {
+    document.getElementById("message-under-clock").innerHTML = message;
   }
 }
 
@@ -68,9 +68,9 @@ function setTimeOnPage(time) {
   setMessageUnderClock();
 
   let formattedTime = time[0] + ":" + time[1];
-  if(document.getElementById("minute").innerHTML !== time[1]) {
-    document.getElementById("hour").innerHTML= time[0];
-    document.getElementById("minute").innerHTML= time[1];
+  if (document.getElementById("minute").innerHTML !== time[1]) {
+    document.getElementById("hour").innerHTML = time[0];
+    document.getElementById("minute").innerHTML = time[1];
   }
 }
 
