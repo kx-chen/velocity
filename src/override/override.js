@@ -65,12 +65,12 @@ function checkTime(i) {
 }
 
 function setTimeOnPage(time) {
-  document.getElementById("clock").innerHTML = time[0] + ":" + time[1];
   setMessageUnderClock();
 
   let formattedTime = time[0] + ":" + time[1];
-  if(document.getElementById("clock").innerHTML !== formattedTime) {
-    document.getElementById("clock").innerHTML= formattedTime;
+  if(document.getElementById("minute").innerHTML !== time[1]) {
+    document.getElementById("hour").innerHTML= time[0];
+    document.getElementById("minute").innerHTML= time[1];
   }
 }
 
