@@ -8,12 +8,6 @@
     "64": "icons/icon64.png"
   },
   "default_locale": "en",
-  "background": {
-    "scripts": [
-      "src/bg/background.js"
-    ],
-    "persistent": true
-  },
   "options_page": "src/options_custom/index.html",
   "browser_action": {
     "default_icon": "icons/icon64.png",
