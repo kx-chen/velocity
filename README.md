@@ -1,10 +1,12 @@
 # Velocity
+[![Build Status](https://travis-ci.com/kx-chen/velocity.svg?token=shUduPKcLXQRPp5hZihq&branch=master)](https://travis-ci.com/kx-chen/velocity)
 
-A New Tab page for humans.
+A New Tab page for humans. https://velocity.kaixingchen.com
 
-To Do: 
-* [ ] Ask user for display name and save to localstorage
-* [ ] Allow user to change background
-* [ ] Dynamic backgrounds like MacOS?
-* [ ] Service Worker for resizing, post code as repo on GitHub
-* [ ] Use npm or yarn to automate building, browserify or similar to bundle JS
+## Development
+
+1. Go to chrome://extensions
+2. Enable developer mode
+3. Click on Load Unpacked Extension and load in the `velocity` folder
+
+### Setting up Webpack
