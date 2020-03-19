@@ -2,7 +2,7 @@
   "name": "velocity",
   "version": "0.0.6",
   "description": "[![Build Status](https://travis-ci.com/kx-chen/velocity.svg?token=shUduPKcLXQRPp5hZihq&branch=master)](https://travis-ci.com/kx-chen/velocity)",
-  "main": "index.js",
+  "private": true,
   "directories": {
     "lib": "lib"
   },
