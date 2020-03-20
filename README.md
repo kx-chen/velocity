@@ -9,4 +9,3 @@ A New Tab page for humans. https://velocity.kaixingchen.com
 2. Enable developer mode
 3. Click on Load Unpacked Extension and load in the `velocity` folder
 
-### Setting up Webpack
