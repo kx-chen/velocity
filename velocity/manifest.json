@@ -17,8 +17,5 @@
   },
   "chrome_url_overrides": {
     "newtab": "override/override.html"
-  },
-  "permissions": [
-    "storage"
-  ]
+  }
 }

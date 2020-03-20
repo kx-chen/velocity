@@ -1,6 +1,5 @@
 import Form from "./Form";
-import { render } from "preact";
-import React from "preact/compat";
+import { render, h } from "preact";
 
 function initPage() {
   const wrapper = document.getElementById("container");

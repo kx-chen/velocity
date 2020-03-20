@@ -1,5 +1,4 @@
 import { Component } from "preact";
-import React from "preact/compat";
 
 class Form extends Component {
   constructor() {
