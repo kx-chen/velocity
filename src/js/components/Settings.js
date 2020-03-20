@@ -1,4 +1,5 @@
 import { Component, h } from "preact";
+import '../../css/Settings.css';
 
 class Settings extends Component {
   constructor() {
@@ -12,7 +13,7 @@ class Settings extends Component {
     return (
       <div>
         <span className="close">X</span>
-        <h1> Settings </h1>
+        <h1 className="settings"> Settings </h1>
       </div>
     );
   }
