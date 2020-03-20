@@ -5,4 +5,4 @@ node_js:
 install:
   - npm install -g prettier
 
-script: prettier **/*.js **/*.html --check
+script: prettier src/**/*.js  --check

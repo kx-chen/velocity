@@ -1,5 +1,5 @@
 import Form from "./Form";
-import { render } from 'preact';
+import { render } from "preact";
 import React from "preact/compat";
 
 function initPage() {
