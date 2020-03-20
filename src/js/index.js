@@ -1,9 +1,8 @@
-import Form from "./Form";
 import { render, h } from "preact";
+import Settings from "./components/Settings";
 
 function initPage() {
-  const wrapper = document.getElementById("container");
-  render(<Form />, wrapper);
+  render(<Settings />, document.getElementsByClassName("modal-content")[0]);
 
   startClock();
   setMessageUnderClock();
