@@ -1,4 +1,10 @@
+import Form from "./Form";
+import { render, h } from "preact";
+
 function initPage() {
+  const wrapper = document.getElementById("container");
+  render(<Form />, wrapper);
+
   startClock();
   setMessageUnderClock();
 

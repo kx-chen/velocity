@@ -1,11 +1,12 @@
 {
   "name": "Velocity",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "manifest_version": 2,
   "description": "A New Tab screen for humans. Simple, elegant and easy to use. Add your own custom backgrounds to make it your own. Free, forever.",
   "homepage_url": "https://kaixingchen.com",
   "icons": {
-    "64": "icons/icon64.png"
+    "64": "icons/icon64.png",
+    "128": "icons/icon128.png"
   },
   "default_locale": "en",
   "options_page": "options_custom/index.html",
@@ -16,8 +17,5 @@
   },
   "chrome_url_overrides": {
     "newtab": "override/override.html"
-  },
-  "permissions": [
-    "storage"
-  ]
+  }
 }
