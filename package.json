@@ -1,6 +1,6 @@
 {
   "name": "velocity",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "description": "[![Build Status](https://travis-ci.com/kx-chen/velocity.svg?token=shUduPKcLXQRPp5hZihq&branch=master)](https://travis-ci.com/kx-chen/velocity)",
   "private": true,
   "directories": {
