@@ -5,7 +5,7 @@ class Settings extends Component {
   constructor() {
     super();
     this.state = {
-      value: ""
+      value: "",
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -14,7 +14,7 @@ class Settings extends Component {
     const reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]);
 
-    reader.onload = e => {
+    reader.onload = (e) => {
       // redux!!
       document.getElementById(
         "body-wrapper"
