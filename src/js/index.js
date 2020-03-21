@@ -15,6 +15,15 @@ function initPage() {
   document.getElementById("name").addEventListener("keydown", nameSubmitted);
 
   promptUserForNameIfNeeded();
+  setUserWallpaper();
+}
+
+function setUserWallpaper() {
+  if (localStorage.getItem("background") !== null) {
+    document.getElementById(
+      "body-wrapper"
+    ).style.backgroundImage = `url(${localStorage.getItem("background")})`;
+  }
 }
 
 function promptUserForNameIfNeeded() {
@@ -36,7 +45,7 @@ function openSettingsMenu(e) {
   };
 
   window.onclick = function(event) {
-    if (event.target === modal) {
+    if (event.target === document.getElementById("body-wrapper")) {
       modal.style.display = "none";
     }
   };
