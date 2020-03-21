@@ -29,7 +29,7 @@ class Settings extends Component {
         <span className="close">X</span>
         <h1 className="settings"> Settings </h1>
         <h2>Set a background</h2>
-        <input id="file" type="file" onChange={this.handleChange} />
+        <input id="file" type="file" onChange={this.handleChange} accept="image/*" />
       </div>
     );
   }
