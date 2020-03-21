@@ -1,8 +1,8 @@
 import { render, h } from "preact";
-import Settings from "./components/Settings";
+import App from './App'
 
 function initPage() {
-  render(<Settings />, document.getElementsByClassName("modal-content")[0]);
+  render(<App />, document.getElementsByClassName("modal-content")[0]);
 
   startClock();
   setMessageUnderClock();
