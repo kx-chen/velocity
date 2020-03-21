@@ -21,3 +21,13 @@ First time running:
 This starts Webpack, which will watch for changes and package them appropriately.
 
 This project uses Prettier, and all commits are checked using Prettier. Lint your code locally by running ```$ npm run lint```
+
+## Code Structure
+
+`src/js/`
+
+Main JavaScript code for Velocity. Components are built with Preact.
+
+`velocity/override/`
+
+Contains the HTML, background images, and bundled JavaScript for the Chrome extension. 
