@@ -4,6 +4,10 @@
   "manifest_version": 2,
   "description": "A New Tab screen for humans. Simple, elegant and easy to use. Add your own custom backgrounds to make it your own. Free, forever.",
   "homepage_url": "https://kaixingchen.com",
+  "background": {
+    "scripts": ["bg/background.js"],
+    "persistent": true
+  },
   "icons": {
     "64": "icons/icon64.png",
     "128": "icons/icon128.png"
