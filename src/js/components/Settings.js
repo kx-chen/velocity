@@ -7,6 +7,18 @@ class Settings extends Component {
     this.state = {
       value: ""
     };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    const reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0]);
+    console.log("e", e.target.files[0]);
+
+    reader.onload = (e) => {
+      document.getElementById("body-wrapper").style.backgroundImage = `url(${ e.target.result })`;
+      localStorage.setItem("background", e.target.result);
+    }
   }
 
   render() {
@@ -14,6 +26,8 @@ class Settings extends Component {
       <div>
         <span className="close">X</span>
         <h1 className="settings"> Settings </h1>
+        <h2>Set a background</h2>
+        <input id='file' type='file' onChange={this.handleChange}/>
       </div>
     );
   }
