@@ -1,5 +1,5 @@
 import { Component, h } from "preact";
-import '../../css/Settings.css';
+import "../../css/Settings.css";
 
 class Settings extends Component {
   constructor() {
@@ -13,12 +13,14 @@ class Settings extends Component {
   handleChange(e) {
     const reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]);
-    console.log("e", e.target.files[0]);
 
-    reader.onload = (e) => {
-      document.getElementById("body-wrapper").style.backgroundImage = `url(${ e.target.result })`;
+    reader.onload = e => {
+      // redux!!
+      document.getElementById(
+        "body-wrapper"
+      ).style.backgroundImage = `url(${e.target.result})`;
       localStorage.setItem("background", e.target.result);
-    }
+    };
   }
 
   render() {
@@ -27,7 +29,7 @@ class Settings extends Component {
         <span className="close">X</span>
         <h1 className="settings"> Settings </h1>
         <h2>Set a background</h2>
-        <input id='file' type='file' onChange={this.handleChange}/>
+        <input id="file" type="file" onChange={this.handleChange} />
       </div>
     );
   }
