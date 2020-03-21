@@ -1,9 +1,22 @@
-import Settings from './components/Settings';
-import { h } from 'preact';
+import { h } from "preact";
+import NameForm from "./components/NameForm";
+import Clock from "./components/Clock";
+import UnderClockMessage from "./components/UnderClockMessage";
+import SettingsIcon from "./components/SettingsIcon";
 
 function App() {
   return (
-    <Settings/>
+    <div id="body-wrapper">
+      <div id="clock-wrapper">
+        <NameForm />
+        <Clock />
+        <UnderClockMessage />
+      </div>
+
+      <div className="left-bottom">
+        <SettingsIcon />
+      </div>
+    </div>
   );
 }
 
