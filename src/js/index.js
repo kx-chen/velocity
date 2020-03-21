@@ -42,11 +42,11 @@ function openSettingsMenu(e) {
 
   modal.style.display = "block";
 
-  span.onclick = function() {
+  span.onclick = function () {
     modal.style.display = "none";
   };
 
-  window.onclick = function(event) {
+  window.onclick = function (event) {
     if (event.target === document.getElementById("body-wrapper")) {
       modal.style.display = "none";
     }
