@@ -26,7 +26,14 @@ class Settings extends Component {
   render() {
     return (
       <div>
-        <span className="close">X</span>
+        <a id="settings-cog" className="close-icon close">
+          <img
+            src="../../icons/close-black-18dp.svg"
+            alt="Settings"
+            height="35"
+            width="35"
+          />
+        </a>
         <h1 className="settings"> Settings </h1>
         <h2>Set a background</h2>
         <input
