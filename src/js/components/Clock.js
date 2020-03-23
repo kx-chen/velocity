@@ -1,11 +1,16 @@
-import { h } from "preact";
+import NameForm from './NameForm'
+import Time from './Time'
+import UnderClockMessage from './UnderClockMessage'
+import { h } from 'preact';
 
 function Clock() {
   return (
-    <div id="clock">
-      <span id="hour"></span>
-      <span id="minute"></span>
+    <div id="clock-wrapper">
+      <NameForm />
+      <Time />
+      <UnderClockMessage />
     </div>
+
   );
 }
 
