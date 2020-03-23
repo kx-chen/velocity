@@ -1,21 +1,19 @@
 import { h } from "preact";
-import NameForm from "./components/NameForm";
-import Clock from "./components/Clock";
-import UnderClockMessage from "./components/UnderClockMessage";
-import SettingsIcon from "./components/SettingsIcon";
+import Settings from './components/Settings'
+import { setMessageUnderClock, startClock } from './utils/utils'
+import Clock from './components/Clock'
+import { useEffect } from 'preact/hooks'
 
 function App() {
+  useEffect(() => {
+    startClock();
+    setMessageUnderClock();
+  }, []);
+
   return (
     <div id="body-wrapper">
-      <div id="clock-wrapper">
-        <NameForm />
-        <Clock />
-        <UnderClockMessage />
-      </div>
-
-      <div className="left-bottom">
-        <SettingsIcon />
-      </div>
+      <Clock/>
+      <Settings/>
     </div>
   );
 }

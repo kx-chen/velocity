@@ -1,50 +1,42 @@
-import { Component, h } from "preact";
-import "../../css/Settings.css";
+import { h } from 'preact'
+import '../../css/Settings.css'
+import { useEffect } from 'preact/hooks'
+import SettingsIcon from './SettingsIcon'
+import SettingsModal from './SettingsModal'
+import { setWallpaper } from '../utils/utils';
 
-class Settings extends Component {
-  constructor() {
-    super();
-    this.state = {
-      value: "",
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
+function openSettingsMenu(e) {
+  let modal = document.getElementById("myModal");
+  let span = document.getElementsByClassName("close")[0];
 
-  handleChange(e) {
-    const reader = new FileReader();
-    reader.readAsDataURL(e.target.files[0]);
+  modal.style.display = "block";
 
-    reader.onload = (e) => {
-      // redux!!
-      document.getElementById(
-        "body-wrapper"
-      ).style.backgroundImage = `url(${e.target.result})`;
-      localStorage.setItem("background", e.target.result);
-    };
-  }
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
 
-  render() {
-    return (
-      <div>
-        <a id="settings-cog" className="close-icon close">
-          <img
-            src="../../icons/close-black-18dp.svg"
-            alt="Settings"
-            height="35"
-            width="35"
-          />
-        </a>
-        <h1 className="settings"> Settings </h1>
-        <h2>Set a background</h2>
-        <input
-          id="file"
-          type="file"
-          onChange={this.handleChange}
-          accept="image/*"
-        />
-      </div>
-    );
-  }
+  window.onclick = function (event) {
+    if (event.target === document.getElementById("body-wrapper")) {
+      modal.style.display = "none";
+    }
+  };
 }
 
-export default Settings;
+function Settings () {
+  useEffect(() => {
+    document
+      .getElementById("settings-cog")
+      .addEventListener("click", openSettingsMenu);
+  }, []);
+
+  return (
+    <div>
+      <div className="left-bottom">
+        <SettingsIcon />
+      </div>
+      <SettingsModal handleWallpaperChange={setWallpaper}/>
+    </div>
+  )
+}
+
+export default Settings
