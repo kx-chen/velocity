@@ -7,17 +7,11 @@ import { setWallpaper } from "../utils/utils";
 
 function openSettingsMenu(open) {
   let modal = document.getElementById("myModal");
-  let span = document.getElementsByClassName("close")[0];
-
   if (open) {
     modal.style.display = "block";
   } else {
     modal.style.display = "none";
   }
-
-  span.onclick = function () {
-    modal.style.display = "none";
-  };
 }
 
 function SettingsContainer() {
