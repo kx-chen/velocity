@@ -1,4 +1,5 @@
 const path = require("path");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: "production",
@@ -28,5 +29,8 @@ module.exports = {
       "react-dom/test-utils": "preact/test-utils",
       "react-dom": "preact/compat",
     },
-  }
+  },
+  plugins: [
+    new BundleAnalyzerPlugin()
+  ]
 };

@@ -1,9 +1,9 @@
 import { h } from "preact";
 
-function SettingsModal({ handleWallpaperChange }) {
+function SettingsModal({ handleWallpaperChange, closeMenu }) {
   return (
     <div id="myModal" className="modal-content modal">
-      <a className="close-icon close">
+      <a className="close-icon close" onClick={() => closeMenu()}>
         <img
           src="../../icons/close-black-18dp.svg"
           alt="Close"

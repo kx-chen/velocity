@@ -18,16 +18,20 @@ function openSettingsMenu(open) {
   span.onclick = function () {
     modal.style.display = "none";
   };
-
-  window.onclick = function (event) {
-    if (event.target === document.getElementById("body-wrapper")) {
-      modal.style.display = "none";
-    }
-  };
 }
 
 function SettingsContainer() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    window.onclick = function (event) {
+      let modal = document.getElementById("myModal");
+      if (event.target === document.getElementById("body-wrapper")) {
+        modal.style.display = "none";
+        setMenuOpen(false);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     openSettingsMenu(menuOpen);
@@ -38,7 +42,10 @@ function SettingsContainer() {
       <div className="left-bottom">
         <SettingsIcon onClick={() => setMenuOpen(!menuOpen)} />
       </div>
-      <SettingsModal handleWallpaperChange={setWallpaper} />
+      <SettingsModal
+        handleWallpaperChange={setWallpaper}
+        closeMenu={() => setMenuOpen(false)}
+      />
     </div>
   );
 }
