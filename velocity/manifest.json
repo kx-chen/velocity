@@ -6,7 +6,7 @@
   "homepage_url": "https://kaixingchen.com",
   "background": {
     "scripts": ["bg/background.js"],
-    "persistent": true
+    "persistent": false
   },
   "icons": {
     "64": "icons/icon64.png",

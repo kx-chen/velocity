@@ -1,8 +1,8 @@
-import { h } from 'preact'
+import { h } from "preact";
 
-function SettingsIcon() {
+function SettingsIcon({ onClick }) {
   return (
-    <a id="settings-cog">
+    <a id="settings-cog" onClick={onClick}>
       <img
         src="../../icons/settings-24px.svg"
         alt="Settings"
