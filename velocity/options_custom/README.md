@@ -1,13 +1,13 @@
-# [Fancy Settings 1.2](https://github.com/frankkohlhepp/fancy-settings)
+# [Fancy SettingsContainer 1.2](https://github.com/frankkohlhepp/fancy-settings)
 *Create fancy, chrome-look-alike settings for your Chrome or Safari extension in minutes!*
 
 ### Howto
-Welcome to Fancy Settings! Are you ready for tabs, groups, search, good style?  
+Welcome to Fancy SettingsContainer! Are you ready for tabs, groups, search, good style?  
 Let's get started, it only takes a few minutes...
 
-Settings can be of different types: text input, checkbox, slider, etc. Some "settings" are not actual settings but provide functionality that is relevant to the options page: description (which is simply a block of text), button.
+SettingsContainer can be of different types: text input, checkbox, slider, etc. Some "settings" are not actual settings but provide functionality that is relevant to the options page: description (which is simply a block of text), button.
 
-Settings are defined in the manifest.js file as JavaScript objects. Each setting is defined by specifying a number of parameters. All types of settings are configured with the string parameters tab, group, name and type.
+SettingsContainer are defined in the manifest.js file as JavaScript objects. Each setting is defined by specifying a number of parameters. All types of settings are configured with the string parameters tab, group, name and type.
 
 ###Basic example:
 ```javascript
@@ -110,5 +110,5 @@ The "displayed text" field is optional and is displayed to the user when you don
 ```
 
 ### License
-Fancy Settings is licensed under the **LGPL 2.1**.  
+Fancy SettingsContainer is licensed under the **LGPL 2.1**.  
 For details see *LICENSE.txt*

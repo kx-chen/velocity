@@ -1,10 +1,10 @@
 import { h } from "preact";
 
-function Time() {
+function Time({ hour, minute }) {
   return (
     <div id="clock">
-      <span id="hour"></span>
-      <span id="minute"></span>
+      <span id="hour">{hour}</span>
+      <span id="minute">{minute}</span>
     </div>
   );
 }

@@ -1,22 +1,18 @@
 function setWallpaper(e) {
-  const reader = new FileReader()
-  reader.readAsDataURL(e.target.files[0])
+  const reader = new FileReader();
+  reader.readAsDataURL(e.target.files[0]);
 
   reader.onload = (e) => {
     document.getElementById(
-      'body-wrapper'
-    ).style.backgroundImage = `url(${e.target.result})`
-    localStorage.setItem('background', e.target.result)
-  }
+      "body-wrapper"
+    ).style.backgroundImage = `url(${e.target.result})`;
+    localStorage.setItem("background", e.target.result);
+  };
 }
 
-function startClock() {
-  doTimeCount();
-  setTimeout(startClock, 500);
-}
-
-function setMessageUnderClock() {
-  let message = "Hello.";
+// TODO: make time a parameter
+function determineMessageUnderClock() {
+  let message = "";
   const hours = getCurrentTime()[0];
 
   if (hours > 24) {
@@ -33,11 +29,10 @@ function setMessageUnderClock() {
 
   message += ", " + localStorage.getItem("name") + ".";
 
-  if (document.getElementById("message-under-clock").innerHTML !== message) {
-    document.getElementById("message-under-clock").innerHTML = message;
-  }
+  return message;
 }
 
+// TODO: return something other than array?
 function getCurrentTime() {
   const today = new Date();
   const h = today.getHours();
@@ -47,10 +42,6 @@ function getCurrentTime() {
   return [h, m];
 }
 
-function doTimeCount() {
-  setTimeOnPage(getCurrentTime());
-}
-
 function checkTime(i) {
   if (i < 10) {
     i = "0" + i;
@@ -58,15 +49,4 @@ function checkTime(i) {
   return i;
 }
 
-function setTimeOnPage(time) {
-  setMessageUnderClock();
-
-  if (
-    parseInt(document.getElementById("minute").innerHTML) !== parseInt(time[1])
-  ) {
-    document.getElementById("hour").innerHTML = time[0];
-    document.getElementById("minute").innerHTML = time[1];
-  }
-}
-
-export { setWallpaper, startClock, checkTime, setTimeOnPage, doTimeCount, getCurrentTime, setMessageUnderClock };
+export { determineMessageUnderClock, setWallpaper, getCurrentTime };
