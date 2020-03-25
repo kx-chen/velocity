@@ -1,8 +1,17 @@
 import { h } from "preact";
 
-function SettingsModal({ handleWallpaperChange, closeMenu }) {
+function SettingsModal({ handleWallpaperChange, closeMenu, visible }) {
+  let display = "none";
+  if (visible) {
+    display = "block";
+  }
+
   return (
-    <div id="myModal" className="modal-content modal">
+    <div
+      id="myModal"
+      className="modal-content modal"
+      style={{ display: display }}
+    >
       <a className="close-icon close" onClick={() => closeMenu()}>
         <img
           src="../../icons/close-black-18dp.svg"

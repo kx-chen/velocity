@@ -16,12 +16,11 @@ function ClockContainer() {
   );
 
   useEffect(() => {
-    setIterations((iterations += 1));
     setMessageUnderClock(determineMessageUnderClock());
+  }, [minute]);
 
-    setTimeout(() => setMinute(getCurrentTime()[1]), timePerTick);
-    setTimeout(() => setHour(getCurrentTime()[0]), timePerTick);
-  }, [iterations]);
+  setInterval(() => setMinute(getCurrentTime()[1]), timePerTick);
+  setInterval(() => setHour(getCurrentTime()[0]), timePerTick);
 
   return (
     <div id="clock-wrapper">

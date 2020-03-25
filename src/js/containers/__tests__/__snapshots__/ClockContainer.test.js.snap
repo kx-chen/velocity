@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClockContainer ClockContainer 1`] = `
+<ClockContainer>
+  <div
+    id="clock-wrapper"
+  >
+    <NameForm>
+      <div
+        id="name-form"
+      >
+        <label
+          className="name-label"
+          htmlFor="name"
+        >
+          Hi. What's your name?
+        </label>
+        <input
+          autoComplete="off"
+          autoFocus={true}
+          id="name"
+          number="50"
+          type="text"
+        />
+      </div>
+    </NameForm>
+    <Time
+      hour="9"
+      minute="41"
+    >
+      <div
+        id="clock"
+      >
+        <span
+          id="hour"
+        >
+          9
+        </span>
+        <span
+          id="minute"
+        >
+          41
+        </span>
+      </div>
+    </Time>
+    <UnderClockMessage
+      message="Good evening, Thog."
+    >
+      <div
+        id="message-under-clock"
+      >
+        Good evening, Thog.
+      </div>
+    </UnderClockMessage>
+  </div>
+</ClockContainer>
+`;
