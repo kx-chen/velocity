@@ -22,6 +22,11 @@ This starts Webpack, which will watch for changes and package them appropriately
 
 This project uses Prettier, and all commits are checked using Prettier. Lint your code locally by running ```$ npm run lint```
 
+### Running Tests
+This project uses Jest as the test runner.
+
+```$ npm run test```
+
 ## Code Structure
 
 `src/js/`
