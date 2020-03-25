@@ -1,3 +1,4 @@
+// TODO: feels too tightly coupled with localStorage, FileReader, etc.
 function setWallpaper(e) {
   const reader = new FileReader();
   reader.readAsDataURL(e.target.files[0]);
@@ -10,7 +11,6 @@ function setWallpaper(e) {
   };
 }
 
-// TODO: make time a parameter
 function determineMessageUnderClock(hours) {
   let message = "";
 
