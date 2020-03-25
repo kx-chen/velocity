@@ -11,9 +11,8 @@ function setWallpaper(e) {
 }
 
 // TODO: make time a parameter
-function determineMessageUnderClock() {
+function determineMessageUnderClock(hours) {
   let message = "";
-  const hours = getCurrentTime()[0];
 
   if (hours > 24) {
     message = "Have a good day";

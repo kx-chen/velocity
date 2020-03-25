@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClockContainer ClockContainer 1`] = `
+exports[`ClockContainer updates clock and message when time changes 1`] = `
 <ClockContainer>
   <div
     id="clock-wrapper"
@@ -25,8 +25,8 @@ exports[`ClockContainer ClockContainer 1`] = `
       </div>
     </NameForm>
     <Time
-      hour="9"
-      minute="41"
+      hour="15"
+      minute="59"
     >
       <div
         id="clock"
@@ -34,22 +34,78 @@ exports[`ClockContainer ClockContainer 1`] = `
         <span
           id="hour"
         >
-          9
+          15
         </span>
         <span
           id="minute"
         >
-          41
+          59
         </span>
       </div>
     </Time>
     <UnderClockMessage
-      message="Good evening, Thog."
+      message="Good afternoon, null."
     >
       <div
         id="message-under-clock"
       >
-        Good evening, Thog.
+        Good afternoon, null.
+      </div>
+    </UnderClockMessage>
+  </div>
+</ClockContainer>
+`;
+
+exports[`ClockContainer updates clock and message when time changes 2`] = `
+<ClockContainer>
+  <div
+    id="clock-wrapper"
+  >
+    <NameForm>
+      <div
+        id="name-form"
+      >
+        <label
+          className="name-label"
+          htmlFor="name"
+        >
+          Hi. What's your name?
+        </label>
+        <input
+          autoComplete="off"
+          autoFocus={true}
+          id="name"
+          number="50"
+          type="text"
+        />
+      </div>
+    </NameForm>
+    <Time
+      hour="18"
+      minute="00"
+    >
+      <div
+        id="clock"
+      >
+        <span
+          id="hour"
+        >
+          18
+        </span>
+        <span
+          id="minute"
+        >
+          00
+        </span>
+      </div>
+    </Time>
+    <UnderClockMessage
+      message="Good evening, null."
+    >
+      <div
+        id="message-under-clock"
+      >
+        Good evening, null.
       </div>
     </UnderClockMessage>
   </div>

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NameForm NameForm 1`] = `
+<NameForm>
+  <div
+    id="name-form"
+  >
+    <label
+      className="name-label"
+      htmlFor="name"
+    >
+      Hi. What's your name?
+    </label>
+    <input
+      autoComplete="off"
+      autoFocus={true}
+      id="name"
+      number="50"
+      type="text"
+    />
+  </div>
+</NameForm>
+`;

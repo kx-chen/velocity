@@ -4,7 +4,7 @@ import { mount } from "enzyme";
 import { expect } from "chai";
 
 describe("SettingsModal", () => {
-  test("SettingsModal", () => {
+  test("calls the correct prop methods", () => {
     const handleWallpaperChange = jest.fn();
     const closeMenu = jest.fn();
     const wrapper = mount(

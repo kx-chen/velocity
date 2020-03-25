@@ -7,21 +7,21 @@ import { useEffect, useState } from "preact/hooks";
 
 function ClockContainer() {
   const timePerTick = 500;
+  let [currentHour, currentMinute] = getCurrentTime();
 
-  const [minute, setMinute] = useState(getCurrentTime()[1]);
-  const [hour, setHour] = useState(getCurrentTime()[0]);
-  let [iterations, setIterations] = useState(0);
+  const [minute, setMinute] = useState(currentMinute);
+  const [hour, setHour] = useState(currentHour);
   const [messageUnderClock, setMessageUnderClock] = useState(
-    determineMessageUnderClock()
+    determineMessageUnderClock(hour)
   );
 
   useEffect(() => {
-    setMessageUnderClock(determineMessageUnderClock());
+    setMessageUnderClock(determineMessageUnderClock(hour));
   }, [minute]);
 
-  setInterval(() => setMinute(getCurrentTime()[1]), timePerTick);
-  setInterval(() => setHour(getCurrentTime()[0]), timePerTick);
-
+  setInterval(() => setMinute(currentMinute), timePerTick);
+  setInterval(() => setHour(currentHour), timePerTick);
+  console.log("ran");
   return (
     <div id="clock-wrapper">
       <NameForm />
