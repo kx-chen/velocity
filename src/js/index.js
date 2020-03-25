@@ -6,8 +6,8 @@ function initPage() {
 
   setTimeout(fadeInBackground, 100);
 
+  // TODO: move this logic out of here
   document.getElementById("name").addEventListener("keydown", nameSubmitted);
-
   promptUserForNameIfNeeded();
   setUserWallpaper();
 }

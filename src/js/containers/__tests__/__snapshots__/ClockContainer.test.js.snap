@@ -25,7 +25,7 @@ exports[`ClockContainer updates clock and message when time changes 1`] = `
       </div>
     </NameForm>
     <Time
-      hour="15"
+      hour="18"
       minute="59"
     >
       <div
@@ -34,7 +34,7 @@ exports[`ClockContainer updates clock and message when time changes 1`] = `
         <span
           id="hour"
         >
-          15
+          18
         </span>
         <span
           id="minute"
@@ -44,12 +44,12 @@ exports[`ClockContainer updates clock and message when time changes 1`] = `
       </div>
     </Time>
     <UnderClockMessage
-      message="Good afternoon, null."
+      message="Good evening, null."
     >
       <div
         id="message-under-clock"
       >
-        Good afternoon, null.
+        Good evening, null.
       </div>
     </UnderClockMessage>
   </div>
@@ -81,8 +81,8 @@ exports[`ClockContainer updates clock and message when time changes 2`] = `
       </div>
     </NameForm>
     <Time
-      hour="18"
-      minute="00"
+      hour="19"
+      minute="59"
     >
       <div
         id="clock"
@@ -90,12 +90,12 @@ exports[`ClockContainer updates clock and message when time changes 2`] = `
         <span
           id="hour"
         >
-          18
+          19
         </span>
         <span
           id="minute"
         >
-          00
+          59
         </span>
       </div>
     </Time>

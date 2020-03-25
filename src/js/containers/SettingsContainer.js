@@ -9,6 +9,7 @@ function SettingsContainer() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
+    // TODO: refactor, hacky.
     window.onclick = function (event) {
       let modal = document.getElementById("myModal");
       if (event.target === document.getElementById("body-wrapper")) {
@@ -18,6 +19,7 @@ function SettingsContainer() {
     };
   }, []);
 
+  // TODO: find if use of setMenuOpen down there is ok
   return (
     <div>
       <div className="left-bottom">

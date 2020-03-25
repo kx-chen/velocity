@@ -1,6 +1,7 @@
 import { h } from "preact";
 
 function SettingsModal({ handleWallpaperChange, closeMenu, visible }) {
+  // TODO: hacky
   let display = "none";
   if (visible) {
     display = "block";
