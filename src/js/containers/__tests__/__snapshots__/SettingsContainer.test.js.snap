@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SettingsContainer Settings closes on clicking x 1`] = `
+<SettingsContainer>
+  <div>
+    <div
+      className="left-bottom"
+    >
+      <SettingsIcon
+        onClick={[Function]}
+      >
+        <a
+          id="settings-cog"
+          onClick={[Function]}
+        >
+          <img
+            alt="Settings"
+            height="35"
+            src="../../icons/settings-24px.svg"
+            width="35"
+          />
+        </a>
+      </SettingsIcon>
+    </div>
+    <SettingsModal
+      closeMenu={[Function]}
+      handleWallpaperChange={[Function]}
+      visible={false}
+    >
+      <div
+        className="modal-content modal"
+        id="myModal"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        <a
+          className="close-icon close"
+          onClick={[Function]}
+        >
+          <img
+            alt="Close"
+            height="35"
+            src="../../icons/close-black-18dp.svg"
+            width="35"
+          />
+        </a>
+        <h1
+          className="settings"
+        >
+           Settings 
+        </h1>
+        <h2>
+          Set a background
+        </h2>
+        <input
+          accept="image/*"
+          id="file"
+          onChange={[Function]}
+          type="file"
+        />
+      </div>
+    </SettingsModal>
+  </div>
+</SettingsContainer>
+`;
+
+exports[`SettingsContainer Settings closes when clicking settings cog again 1`] = `
+<SettingsContainer>
+  <div>
+    <div
+      className="left-bottom"
+    >
+      <SettingsIcon
+        onClick={[Function]}
+      >
+        <a
+          id="settings-cog"
+          onClick={[Function]}
+        >
+          <img
+            alt="Settings"
+            height="35"
+            src="../../icons/settings-24px.svg"
+            width="35"
+          />
+        </a>
+      </SettingsIcon>
+    </div>
+    <SettingsModal
+      closeMenu={[Function]}
+      handleWallpaperChange={[Function]}
+      visible={false}
+    >
+      <div
+        className="modal-content modal"
+        id="myModal"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        <a
+          className="close-icon close"
+          onClick={[Function]}
+        >
+          <img
+            alt="Close"
+            height="35"
+            src="../../icons/close-black-18dp.svg"
+            width="35"
+          />
+        </a>
+        <h1
+          className="settings"
+        >
+           Settings 
+        </h1>
+        <h2>
+          Set a background
+        </h2>
+        <input
+          accept="image/*"
+          id="file"
+          onChange={[Function]}
+          type="file"
+        />
+      </div>
+    </SettingsModal>
+  </div>
+</SettingsContainer>
+`;
+
+exports[`SettingsContainer Settings opens on click 1`] = `
+<SettingsContainer>
+  <div>
+    <div
+      className="left-bottom"
+    >
+      <SettingsIcon
+        onClick={[Function]}
+      >
+        <a
+          id="settings-cog"
+          onClick={[Function]}
+        >
+          <img
+            alt="Settings"
+            height="35"
+            src="../../icons/settings-24px.svg"
+            width="35"
+          />
+        </a>
+      </SettingsIcon>
+    </div>
+    <SettingsModal
+      closeMenu={[Function]}
+      handleWallpaperChange={[Function]}
+      visible={true}
+    >
+      <div
+        className="modal-content modal"
+        id="myModal"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+      >
+        <a
+          className="close-icon close"
+          onClick={[Function]}
+        >
+          <img
+            alt="Close"
+            height="35"
+            src="../../icons/close-black-18dp.svg"
+            width="35"
+          />
+        </a>
+        <h1
+          className="settings"
+        >
+           Settings 
+        </h1>
+        <h2>
+          Set a background
+        </h2>
+        <input
+          accept="image/*"
+          id="file"
+          onChange={[Function]}
+          type="file"
+        />
+      </div>
+    </SettingsModal>
+  </div>
+</SettingsContainer>
+`;

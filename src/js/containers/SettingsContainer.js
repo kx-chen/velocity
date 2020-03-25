@@ -5,15 +5,6 @@ import SettingsIcon from "../components/SettingsIcon";
 import SettingsModal from "../components/SettingsModal";
 import { setWallpaper } from "../utils/utils";
 
-function openSettingsMenu(open) {
-  let modal = document.getElementById("myModal");
-  if (open) {
-    modal.style.display = "block";
-  } else {
-    modal.style.display = "none";
-  }
-}
-
 function SettingsContainer() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -27,10 +18,6 @@ function SettingsContainer() {
     };
   }, []);
 
-  useEffect(() => {
-    openSettingsMenu(menuOpen);
-  }, [menuOpen]);
-
   return (
     <div>
       <div className="left-bottom">
@@ -39,6 +26,7 @@ function SettingsContainer() {
       <SettingsModal
         handleWallpaperChange={setWallpaper}
         closeMenu={() => setMenuOpen(false)}
+        visible={menuOpen}
       />
     </div>
   );

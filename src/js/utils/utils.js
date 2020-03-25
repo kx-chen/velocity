@@ -34,6 +34,7 @@ function determineMessageUnderClock() {
 
 // TODO: return something other than array?
 function getCurrentTime() {
+  // TODO: parameter?
   const today = new Date();
   const h = today.getHours();
   let m = today.getMinutes();
@@ -49,4 +50,4 @@ function checkTime(i) {
   return i;
 }
 
-export { determineMessageUnderClock, setWallpaper, getCurrentTime };
+export { determineMessageUnderClock, setWallpaper, getCurrentTime, checkTime };
