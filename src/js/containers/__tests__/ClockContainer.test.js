@@ -20,13 +20,11 @@ describe("ClockContainer", () => {
   jest.useFakeTimers();
 
   test("updates clock and message when time changes", () => {
-    // TODO: see if can not mount second time
     const wrapper = mount(<ClockContainer />);
 
     expect(wrapper).toMatchSnapshot();
-    jest.advanceTimersByTime(500);
-
-    const wrapper2 = mount(<ClockContainer />);
-    expect(wrapper2).toMatchSnapshot();
+    jest.advanceTimersByTime(1000);
+    wrapper.update();
+    expect(wrapper).toMatchSnapshot();
   });
 });
