@@ -22,7 +22,7 @@ jest.mock("../../utils/utils", () => ({
     .mockReturnValueOnce(["19", "59"])
     .mockReturnValueOnce(["19", "59"]),
   // TODO: integration test
-  determineMessageUnderClock: jest.fn().mockReturnValue("Message Under Clock")
+  determineMessageUnderClock: jest.fn().mockReturnValue("Message Under Clock"),
 }));
 
 describe("ClockContainer", () => {
@@ -36,4 +36,6 @@ describe("ClockContainer", () => {
     wrapper.update();
     expect(wrapper).toMatchSnapshot();
   });
+
+  test("asks user for name if name is not set", () => {});
 });

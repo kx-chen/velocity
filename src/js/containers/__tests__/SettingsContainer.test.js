@@ -28,4 +28,6 @@ describe("SettingsContainer", () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+
+  test("", () => {});
 });

@@ -1,7 +1,6 @@
 export const SET_TIME_FORMAT = "SET_TIME_FORMAT";
 
 export function setTimeFormat(format) {
-  // console.log('setTimeFormat', format);
   return (dispatch) => {
     localStorage.setItem("timeFormat", format);
     dispatch(saveTimeFormat(format));
