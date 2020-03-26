@@ -3,8 +3,26 @@ import Time from "../components/Time";
 import UnderClockMessage from "../components/UnderClockMessage";
 import { determineMessageUnderClock, getCurrentTime } from "../utils/utils";
 import { h } from "preact";
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useState, useRef } from "preact/hooks";
 import { connect } from "react-redux";
+
+function useInterval(callback, delay) {
+  let savedCallback = useRef();
+
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      let id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
+}
 
 export function ClockContainer({ timeFormat }) {
   const timePerTick = 500;
@@ -19,22 +37,10 @@ export function ClockContainer({ timeFormat }) {
     setMessageUnderClock(determineMessageUnderClock());
   }, [minute]);
 
-  let interval1 = setInterval(
-    () => setMinute(getCurrentTime(timeFormat)[1]),
-    timePerTick
-  );
-  let interval2 = setInterval(
-    () => setHour(getCurrentTime(timeFormat)[0]),
-    timePerTick
-  );
-
-  useEffect(() => {
-    // wait for next tick so that time updates before clearing intervals
-    setTimeout(() => {
-      clearInterval(interval1);
-      clearInterval(interval2);
-    }, 1000);
-  });
+  useInterval(() => {
+    setMinute(getCurrentTime(timeFormat)[1]);
+    setHour(getCurrentTime(timeFormat)[0]);
+  }, 500);
 
   return (
     <div id="clock-wrapper">
