@@ -27,6 +27,10 @@ This project uses Jest as the test runner.
 
 ```$ npm run test```
 
+### End to End Tests
+
+Coming soon.
+
 ## Code Structure
 
 `src/js/`

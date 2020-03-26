@@ -11,8 +11,9 @@ function setWallpaper(e) {
   };
 }
 
-function determineMessageUnderClock(hours) {
+function determineMessageUnderClock() {
   let message = "";
+  let hours = getCurrentTime(false)[0];
 
   if (hours > 24) {
     message = "Have a good day";
@@ -32,12 +33,16 @@ function determineMessageUnderClock(hours) {
 }
 
 // TODO: return something other than array?
-function getCurrentTime() {
+function getCurrentTime(twelveHour) {
   // TODO: parameter?
   const today = new Date();
-  const h = today.getHours();
+  let h = today.getHours();
   let m = today.getMinutes();
   m = checkTime(m);
+
+  if (twelveHour) {
+    h = h % 12;
+  }
 
   return [h, m];
 }

@@ -4,24 +4,38 @@ import UnderClockMessage from "../components/UnderClockMessage";
 import { determineMessageUnderClock, getCurrentTime } from "../utils/utils";
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
+import { connect } from "react-redux";
 
-function ClockContainer() {
+export function ClockContainer({ timeFormat }) {
   const timePerTick = 500;
   // TODO: call getCurrentTime less
 
-  const [minute, setMinute] = useState(getCurrentTime()[1]);
-  const [hour, setHour] = useState(getCurrentTime()[0]);
+  const [minute, setMinute] = useState(getCurrentTime(timeFormat)[1]);
+  const [hour, setHour] = useState(getCurrentTime(timeFormat)[0]);
   const [messageUnderClock, setMessageUnderClock] = useState(
-    determineMessageUnderClock(hour)
+    determineMessageUnderClock()
+  );
+  useEffect(() => {
+    setMessageUnderClock(determineMessageUnderClock());
+  }, [minute]);
+
+  let interval1 = setInterval(
+    () => setMinute(getCurrentTime(timeFormat)[1]),
+    timePerTick
+  );
+  let interval2 = setInterval(
+    () => setHour(getCurrentTime(timeFormat)[0]),
+    timePerTick
   );
 
   useEffect(() => {
-    setMessageUnderClock(determineMessageUnderClock(hour));
-  }, [minute]);
+    // wait for next tick so that time updates before clearing intervals
+    setTimeout(() => {
+      clearInterval(interval1);
+      clearInterval(interval2);
+    }, 1000);
+  });
 
-  // TODO: hooks allowed to be called in this way?
-  setInterval(() => setMinute(getCurrentTime()[1]), timePerTick);
-  setInterval(() => setHour(getCurrentTime()[0]), timePerTick);
   return (
     <div id="clock-wrapper">
       <NameForm />
@@ -31,4 +45,17 @@ function ClockContainer() {
   );
 }
 
-export default ClockContainer;
+function mapDispatchToProps(dispatch, ownProps) {
+  return {
+    dispatch,
+  };
+}
+
+function mapStateToProps(state, ownProps) {
+  return {
+    ...state,
+    timeFormat: state.time_format,
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ClockContainer);

@@ -52,6 +52,10 @@ exports[`SettingsContainer Settings closes on clicking x 1`] = `
         >
            Settings 
         </h1>
+        <hr
+          align="left"
+          width="25%"
+        />
         <h2>
           Set a background
         </h2>
@@ -61,6 +65,22 @@ exports[`SettingsContainer Settings closes on clicking x 1`] = `
           onChange={[Function]}
           type="file"
         />
+        <h2>
+          Time Format
+        </h2>
+        <p>
+          Default format is 24 hours.
+        </p>
+        <input
+          id="format"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <label
+          htmlFor="format"
+        >
+          12 hour
+        </label>
       </div>
     </SettingsModal>
   </div>
@@ -119,6 +139,10 @@ exports[`SettingsContainer Settings closes when clicking settings cog again 1`] 
         >
            Settings 
         </h1>
+        <hr
+          align="left"
+          width="25%"
+        />
         <h2>
           Set a background
         </h2>
@@ -128,6 +152,22 @@ exports[`SettingsContainer Settings closes when clicking settings cog again 1`] 
           onChange={[Function]}
           type="file"
         />
+        <h2>
+          Time Format
+        </h2>
+        <p>
+          Default format is 24 hours.
+        </p>
+        <input
+          id="format"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <label
+          htmlFor="format"
+        >
+          12 hour
+        </label>
       </div>
     </SettingsModal>
   </div>
@@ -186,6 +226,10 @@ exports[`SettingsContainer Settings opens on click 1`] = `
         >
            Settings 
         </h1>
+        <hr
+          align="left"
+          width="25%"
+        />
         <h2>
           Set a background
         </h2>
@@ -195,6 +239,22 @@ exports[`SettingsContainer Settings opens on click 1`] = `
           onChange={[Function]}
           type="file"
         />
+        <h2>
+          Time Format
+        </h2>
+        <p>
+          Default format is 24 hours.
+        </p>
+        <input
+          id="format"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <label
+          htmlFor="format"
+        >
+          12 hour
+        </label>
       </div>
     </SettingsModal>
   </div>

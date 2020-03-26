@@ -1,10 +1,11 @@
-import ClockContainer from "../ClockContainer";
+import { ClockContainer } from "../ClockContainer";
 import { h } from "preact";
 import { mount } from "enzyme";
 
 jest.mock("../../utils/utils", () => ({
-  ...(jest.requireActual('../../utils/utils')),
-  getCurrentTime: jest.fn()
+  ...jest.requireActual("../../utils/utils"),
+  getCurrentTime: jest
+    .fn()
     // TODO: fix, hacky.
     .mockReturnValueOnce(["18", "59"])
     .mockReturnValueOnce(["18", "59"])
@@ -14,6 +15,13 @@ jest.mock("../../utils/utils", () => ({
     .mockReturnValueOnce(["19", "59"])
     .mockReturnValueOnce(["19", "59"])
     .mockReturnValueOnce(["19", "59"])
+    .mockReturnValueOnce(["19", "59"])
+    .mockReturnValueOnce(["19", "59"])
+    .mockReturnValueOnce(["19", "59"])
+    .mockReturnValueOnce(["19", "59"])
+    .mockReturnValueOnce(["19", "59"])
+    .mockReturnValueOnce(["19", "59"]),
+  determineMessageUnderClock: jest.fn().mockReturnValue("Message Under Clock")
 }));
 
 describe("ClockContainer", () => {

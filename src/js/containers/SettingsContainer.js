@@ -4,8 +4,10 @@ import { useEffect, useState } from "preact/hooks";
 import SettingsIcon from "../components/SettingsIcon";
 import SettingsModal from "../components/SettingsModal";
 import { setWallpaper } from "../utils/utils";
+import { getTimeFormat, setTimeFormat } from "../actions/settings";
+import { connect } from "react-redux";
 
-function SettingsContainer() {
+export function SettingsContainer({ changeTimeFormat, timeFormat, dispatch }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -29,9 +31,25 @@ function SettingsContainer() {
         handleWallpaperChange={setWallpaper}
         closeMenu={() => setMenuOpen(false)}
         visible={menuOpen}
+        changeTimeFormat={changeTimeFormat}
+        timeFormat={timeFormat}
       />
     </div>
   );
 }
 
-export default SettingsContainer;
+function mapDispatchToProps(dispatch, ownProps) {
+  return {
+    changeTimeFormat: (timeFormat) => dispatch(setTimeFormat(timeFormat)),
+    dispatch,
+  };
+}
+
+function mapStateToProps(state, ownProps) {
+  return {
+    ...state,
+    timeFormat: state.time_format,
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SettingsContainer);
