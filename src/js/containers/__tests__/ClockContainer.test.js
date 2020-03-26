@@ -21,6 +21,7 @@ jest.mock("../../utils/utils", () => ({
     .mockReturnValueOnce(["19", "59"])
     .mockReturnValueOnce(["19", "59"])
     .mockReturnValueOnce(["19", "59"]),
+  // TODO: integration test
   determineMessageUnderClock: jest.fn().mockReturnValue("Message Under Clock")
 }));
 
