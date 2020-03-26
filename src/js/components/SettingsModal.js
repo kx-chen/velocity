@@ -1,12 +1,17 @@
 import { h } from "preact";
 
-function SettingsModal({ handleWallpaperChange, closeMenu, visible }) {
+function SettingsModal({
+  handleWallpaperChange,
+  closeMenu,
+  visible,
+  changeTimeFormat,
+  timeFormat,
+}) {
   // TODO: hacky
   let display = "none";
   if (visible) {
     display = "block";
   }
-
   return (
     <div
       id="myModal"
@@ -22,6 +27,7 @@ function SettingsModal({ handleWallpaperChange, closeMenu, visible }) {
         />
       </a>
       <h1 className="settings"> Settings </h1>
+      <hr width="25%" align="left" />
       <h2>Set a background</h2>
       <input
         id="file"
@@ -29,6 +35,16 @@ function SettingsModal({ handleWallpaperChange, closeMenu, visible }) {
         onChange={handleWallpaperChange}
         accept="image/*"
       />
+
+      <h2>Time Format</h2>
+      <p>Default format is 24 hours.</p>
+      <input
+        id="format"
+        type="checkbox"
+        onChange={() => changeTimeFormat(!timeFormat)}
+        defaultChecked={timeFormat}
+      />
+      <label htmlFor="format">12 hour</label>
     </div>
   );
 }

@@ -14,7 +14,7 @@ describe("SettingsModal", () => {
       />
     );
 
-    wrapper.find("input").simulate("change");
+    wrapper.find("#file").simulate("change");
     wrapper.find("a").simulate("click");
 
     expect(closeMenu.mock.calls.length).to.equal(1);

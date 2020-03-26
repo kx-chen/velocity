@@ -44,12 +44,12 @@ exports[`ClockContainer updates clock and message when time changes 1`] = `
       </div>
     </Time>
     <UnderClockMessage
-      message="Good evening, null."
+      message="Message Under Clock"
     >
       <div
         id="message-under-clock"
       >
-        Good evening, null.
+        Message Under Clock
       </div>
     </UnderClockMessage>
   </div>
@@ -100,12 +100,12 @@ exports[`ClockContainer updates clock and message when time changes 2`] = `
       </div>
     </Time>
     <UnderClockMessage
-      message="Good evening, null."
+      message="Message Under Clock"
     >
       <div
         id="message-under-clock"
       >
-        Good evening, null.
+        Message Under Clock
       </div>
     </UnderClockMessage>
   </div>

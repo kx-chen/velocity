@@ -1,4 +1,4 @@
-import SettingsContainer from "../SettingsContainer";
+import { SettingsContainer } from "../SettingsContainer";
 import { h } from "preact";
 import { mount } from "enzyme";
 
