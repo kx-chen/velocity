@@ -5,7 +5,6 @@ const initialState = {
 };
 
 function rootReducer(state = initialState, action) {
-  // console.log('rootReducer state', state);
   switch (action.type) {
     case SET_TIME_FORMAT:
       return {

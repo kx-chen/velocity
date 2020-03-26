@@ -7,7 +7,6 @@ function SettingsModal({
   changeTimeFormat,
   timeFormat,
 }) {
-  // TODO: hacky
   let display = "none";
   if (visible) {
     display = "block";

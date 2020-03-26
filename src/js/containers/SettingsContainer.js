@@ -1,10 +1,11 @@
-import { h } from "preact";
 import "../../css/Settings.css";
-import { useEffect, useState } from "preact/hooks";
 import SettingsIcon from "../components/SettingsIcon";
 import SettingsModal from "../components/SettingsModal";
-import { setWallpaper } from "../utils/utils";
 import { getTimeFormat, setTimeFormat } from "../actions/settings";
+import { setWallpaper } from "../utils/utils";
+
+import { useEffect, useState } from "preact/hooks";
+import { h } from "preact";
 import { connect } from "react-redux";
 
 export function SettingsContainer({ changeTimeFormat, timeFormat, dispatch }) {

@@ -2,6 +2,7 @@ import NameForm from "../components/NameForm";
 import Time from "../components/Time";
 import UnderClockMessage from "../components/UnderClockMessage";
 import { determineMessageUnderClock, getCurrentTime } from "../utils/utils";
+
 import { h } from "preact";
 import { useEffect, useState, useRef } from "preact/hooks";
 import { connect } from "react-redux";
@@ -25,9 +26,6 @@ function useInterval(callback, delay) {
 }
 
 export function ClockContainer({ timeFormat }) {
-  const timePerTick = 500;
-  // TODO: call getCurrentTime less
-
   const [minute, setMinute] = useState(getCurrentTime(timeFormat)[1]);
   const [hour, setHour] = useState(getCurrentTime(timeFormat)[0]);
   const [messageUnderClock, setMessageUnderClock] = useState(

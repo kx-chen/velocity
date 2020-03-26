@@ -5,12 +5,13 @@ function setWallpaper(e) {
 
   reader.onload = (e) => {
     document.getElementById(
-      "body-wrapper"
+      "background"
     ).style.backgroundImage = `url(${e.target.result})`;
     localStorage.setItem("background", e.target.result);
   };
 }
 
+// TODO: decouple from localStorage
 function determineMessageUnderClock() {
   let message = "";
   let hours = getCurrentTime(false)[0];

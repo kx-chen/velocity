@@ -4,18 +4,19 @@ import App from "./App";
 function initPage() {
   render(<App />, document.getElementById("app"));
 
-  setTimeout(fadeInBackground, 100);
+  fadeInBackground();
+  setUserWallpaper();
+  // setTimeout(fadeInBackground, 50);
 
   // TODO: move this logic out of here
   document.getElementById("name").addEventListener("keydown", nameSubmitted);
   promptUserForNameIfNeeded();
-  setUserWallpaper();
 }
 
 function setUserWallpaper() {
   if (localStorage.getItem("background") !== null) {
     document.getElementById(
-      "body-wrapper"
+      "background"
     ).style.backgroundImage = `url(${localStorage.getItem("background")})`;
   }
 }
@@ -29,7 +30,7 @@ function promptUserForNameIfNeeded() {
 }
 
 function fadeInBackground() {
-  document.getElementById("body-wrapper").style.display = "block";
+  document.getElementById("background").style.display = "block";
 }
 
 function nameSubmitted(e) {
