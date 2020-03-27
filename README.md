@@ -3,6 +3,12 @@
 
 A New Tab page for humans. http://velocity.kaixingchen.com
 
+![Dashboard view](screenshots/main.png?raw=true "Dashboard view")
+
+![Start view](screenshots/start.png?raw=true "Start view")
+
+![Settings](screenshots/settings.png?raw=true "Settings")
+
 ## Development
 
 ### Installing in Chrome
