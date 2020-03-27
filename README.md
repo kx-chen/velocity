@@ -37,7 +37,7 @@ This project uses Jest as the test runner.
 
 Coming soon.
 
-## Code Structure
+## Code Structure/Tech Stack
 
 `src/js/`
 
@@ -46,6 +46,22 @@ Main JavaScript code for Velocity. Components are built with Preact.
 `velocity/override/`
 
 Contains the HTML, background images, and bundled JavaScript for the Chrome extension. 
+
+Some libraries/technologies/build tools this project uses:
+* Preact
+* Redux
+* Webpack
+* Travis CI
+* Babel
+* Jest
+
+All were setup from scratch. Any contributions to the configuration are welcome. 
+
+Great care was taken to ensure the bundled JavaScript size does not get too big. 
+As of now, the bundled JavaScript is around 50kB.
+
+Great care was also taken to ensure that the extension loads quickly. 
+The current load time for the extension is around 80ms (according to DevTools).
 
 
 ### Known Issues
