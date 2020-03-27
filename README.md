@@ -77,6 +77,7 @@ The current load time for the extension is around 80ms (according to DevTools).
 All contributions, pull requests, and feedback welcome! Roasts of all kinds welcome
 
 ## Future Plans
-* Deployment to the Chrome Web Store -- submitted for review already.
-* End to End tests.
-* And more!
+* [x]  Deployment to the Chrome Web Store -- submitted for review already.
+* [ ] End to End tests.
+
+And more!
