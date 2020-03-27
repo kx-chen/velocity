@@ -40,3 +40,13 @@ Main JavaScript code for Velocity. Components are built with Preact.
 `velocity/override/`
 
 Contains the HTML, background images, and bundled JavaScript for the Chrome extension. 
+
+
+## Contributions
+
+All contributions, pull requests, and feedback welcome! Roasts of all kinds welcome
+
+## Future Plans
+* Deployment to the Chrome Web Store -- submitted for review already.
+* End to End tests.
+* And more!
