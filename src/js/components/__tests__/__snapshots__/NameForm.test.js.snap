@@ -16,6 +16,7 @@ exports[`NameForm NameForm 1`] = `
       autoFocus={true}
       id="name"
       number="50"
+      onKeyPress={[Function]}
       type="text"
     />
   </div>

@@ -12,7 +12,7 @@ function setWallpaper(e) {
 }
 
 // TODO: decouple from localStorage
-function determineMessageUnderClock() {
+function determineMessageUnderClock(name) {
   let message = "";
   let hours = getCurrentTime(false)[0];
 
@@ -28,7 +28,7 @@ function determineMessageUnderClock() {
     message = "Good morning";
   }
 
-  message += ", " + localStorage.getItem("name") + ".";
+  message += ", " + name + ".";
 
   return message;
 }

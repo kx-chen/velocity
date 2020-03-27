@@ -42,6 +42,14 @@ Main JavaScript code for Velocity. Components are built with Preact.
 Contains the HTML, background images, and bundled JavaScript for the Chrome extension. 
 
 
+### Known Issues
+* Name form input not sanitized
+* High resolution background images are accepted and cause lag
+* Background image uploading has no validation
+* 12/24 hour time cannot determine difference between 12 pm and 12 am, both display 0 as hour. 
+(needs big refactoring of the way time is handled)
+
+
 ## Contributions
 
 All contributions, pull requests, and feedback welcome! Roasts of all kinds welcome

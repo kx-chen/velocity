@@ -1,5 +1,6 @@
 import { render, h } from "preact";
 import App from "./App";
+import { determineMessageUnderClock } from "./utils/utils";
 
 function initPage() {
   render(<App />, document.getElementById("app"));
@@ -9,7 +10,6 @@ function initPage() {
   // setTimeout(fadeInBackground, 50);
 
   // TODO: move this logic out of here
-  document.getElementById("name").addEventListener("keydown", nameSubmitted);
   promptUserForNameIfNeeded();
 }
 
@@ -31,15 +31,6 @@ function promptUserForNameIfNeeded() {
 
 function fadeInBackground() {
   document.getElementById("background").style.display = "block";
-}
-
-function nameSubmitted(e) {
-  if (e.key === "Enter") {
-    localStorage.setItem("name", e.srcElement.value);
-    document.getElementById("name-form").style.display = "none";
-    document.getElementById("clock").style.display = "block";
-    document.getElementById("message-under-clock").style.display = "block";
-  }
 }
 
 function ready(fn) {

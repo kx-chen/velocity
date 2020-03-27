@@ -6,6 +6,7 @@ import { determineMessageUnderClock, getCurrentTime } from "../utils/utils";
 import { h } from "preact";
 import { useEffect, useState, useRef } from "preact/hooks";
 import { connect } from "react-redux";
+import { setDisplayName } from "../actions/settings";
 
 function useInterval(callback, delay) {
   let savedCallback = useRef();
@@ -25,26 +26,35 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
-export function ClockContainer({ timeFormat }) {
+export function ClockContainer({ timeFormat, displayName, onNameChange }) {
   const [minute, setMinute] = useState(getCurrentTime(timeFormat)[1]);
   const [hour, setHour] = useState(getCurrentTime(timeFormat)[0]);
   const [messageUnderClock, setMessageUnderClock] = useState(
-    determineMessageUnderClock()
+    determineMessageUnderClock(displayName)
   );
   useEffect(() => {
-    setMessageUnderClock(determineMessageUnderClock());
+    setMessageUnderClock(determineMessageUnderClock(displayName));
   }, [minute]);
+
+  // TODO: find out cleaner way to do this
+  useEffect(() => {
+    setMessageUnderClock(determineMessageUnderClock(displayName));
+  });
 
   useInterval(() => {
     setMinute(getCurrentTime(timeFormat)[1]);
     setHour(getCurrentTime(timeFormat)[0]);
   }, 500);
 
+  // TODO: visible prop is SUPER hacky, change ASAP
   return (
     <div id="clock-wrapper">
-      <NameForm />
-      <Time hour={hour} minute={minute} />
-      <UnderClockMessage message={messageUnderClock} />
+      <NameForm onSubmit={onNameChange} visible={displayName !== null} />
+      <Time hour={hour} minute={minute} visible={displayName === null} />
+      <UnderClockMessage
+        message={messageUnderClock}
+        visible={displayName === null}
+      />
     </div>
   );
 }
@@ -52,12 +62,14 @@ export function ClockContainer({ timeFormat }) {
 function mapDispatchToProps(dispatch, ownProps) {
   return {
     dispatch,
+    onNameChange: (e) => dispatch(setDisplayName(e)),
   };
 }
 
 function mapStateToProps(state, ownProps) {
   return {
     ...state,
+    displayName: state.display_name,
     timeFormat: state.time_format,
   };
 }

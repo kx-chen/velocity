@@ -5,28 +5,13 @@ exports[`ClockContainer updates clock and message when time changes 1`] = `
   <div
     id="clock-wrapper"
   >
-    <NameForm>
-      <div
-        id="name-form"
-      >
-        <label
-          className="name-label"
-          htmlFor="name"
-        >
-          Hi. What's your name?
-        </label>
-        <input
-          autoComplete="off"
-          autoFocus={true}
-          id="name"
-          number="50"
-          type="text"
-        />
-      </div>
-    </NameForm>
+    <NameForm
+      visible={true}
+    />
     <Time
       hour="18"
       minute="59"
+      visible={false}
     >
       <div
         id="clock"
@@ -45,6 +30,7 @@ exports[`ClockContainer updates clock and message when time changes 1`] = `
     </Time>
     <UnderClockMessage
       message="Message Under Clock"
+      visible={false}
     >
       <div
         id="message-under-clock"
@@ -61,28 +47,13 @@ exports[`ClockContainer updates clock and message when time changes 2`] = `
   <div
     id="clock-wrapper"
   >
-    <NameForm>
-      <div
-        id="name-form"
-      >
-        <label
-          className="name-label"
-          htmlFor="name"
-        >
-          Hi. What's your name?
-        </label>
-        <input
-          autoComplete="off"
-          autoFocus={true}
-          id="name"
-          number="50"
-          type="text"
-        />
-      </div>
-    </NameForm>
+    <NameForm
+      visible={true}
+    />
     <Time
       hour="19"
       minute="59"
+      visible={false}
     >
       <div
         id="clock"
@@ -101,6 +72,7 @@ exports[`ClockContainer updates clock and message when time changes 2`] = `
     </Time>
     <UnderClockMessage
       message="Message Under Clock"
+      visible={false}
     >
       <div
         id="message-under-clock"
