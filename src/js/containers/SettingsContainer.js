@@ -1,14 +1,14 @@
 import "../../css/Settings.css";
 import SettingsIcon from "../components/SettingsIcon";
 import SettingsModal from "../components/SettingsModal";
-import { getTimeFormat, setTimeFormat } from "../actions/settings";
+import { setTimeFormat } from "../actions/settings";
 import { setWallpaper } from "../utils/utils";
 
 import { useEffect, useState } from "preact/hooks";
 import { h } from "preact";
 import { connect } from "react-redux";
 
-export function SettingsContainer({ changeTimeFormat, timeFormat, dispatch }) {
+export function SettingsContainer({ changeTimeFormat, timeFormat }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,6 @@ export function SettingsContainer({ changeTimeFormat, timeFormat, dispatch }) {
     };
   }, []);
 
-  // TODO: find if use of setMenuOpen down there is ok
   return (
     <div>
       <div className="left-bottom">
@@ -42,7 +41,6 @@ export function SettingsContainer({ changeTimeFormat, timeFormat, dispatch }) {
 function mapDispatchToProps(dispatch, ownProps) {
   return {
     changeTimeFormat: (timeFormat) => dispatch(setTimeFormat(timeFormat)),
-    dispatch,
   };
 }
 

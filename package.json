@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "watch": "webpack --watch",
     "start": "webpack-dev-server --open",
     "build": "webpack --mode production",

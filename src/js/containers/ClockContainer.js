@@ -1,12 +1,12 @@
 import NameForm from "../components/NameForm";
 import Time from "../components/Time";
 import UnderClockMessage from "../components/UnderClockMessage";
+import { setDisplayName } from "../actions/settings";
 import { determineMessageUnderClock, getCurrentTime } from "../utils/utils";
 
 import { h } from "preact";
 import { useEffect, useState, useRef } from "preact/hooks";
 import { connect } from "react-redux";
-import { setDisplayName } from "../actions/settings";
 
 function useInterval(callback, delay) {
   let savedCallback = useRef();
@@ -32,11 +32,7 @@ export function ClockContainer({ timeFormat, displayName, onNameChange }) {
   const [messageUnderClock, setMessageUnderClock] = useState(
     determineMessageUnderClock(displayName)
   );
-  useEffect(() => {
-    setMessageUnderClock(determineMessageUnderClock(displayName));
-  }, [minute]);
 
-  // TODO: find out cleaner way to do this
   useEffect(() => {
     setMessageUnderClock(determineMessageUnderClock(displayName));
   });
@@ -61,7 +57,6 @@ export function ClockContainer({ timeFormat, displayName, onNameChange }) {
 
 function mapDispatchToProps(dispatch, ownProps) {
   return {
-    dispatch,
     onNameChange: (e) => dispatch(setDisplayName(e)),
   };
 }
