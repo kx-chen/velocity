@@ -24,9 +24,7 @@ export function SettingsContainer({ changeTimeFormat, timeFormat }) {
 
   return (
     <div>
-      <div className="left-bottom">
-        <SettingsIcon onClick={() => setMenuOpen(!menuOpen)} />
-      </div>
+      <SettingsIcon onClick={() => setMenuOpen(!menuOpen)} />
       <SettingsModal
         handleWallpaperChange={setWallpaper}
         closeMenu={() => setMenuOpen(false)}

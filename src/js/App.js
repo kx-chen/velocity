@@ -16,7 +16,12 @@ function App() {
         <ul id="background" className="background" />
         <ul id="fade" className="background" />
         <ClockContainer />
-        <SettingsContainer />
+        <div className="left-bottom">
+          <SettingsContainer />
+        </div>
+        <div className="center-bottom">
+          <h1>"My dogs are named Billy and Panda." -Angus Smith</h1>
+        </div>
       </div>
     </Provider>
   );
