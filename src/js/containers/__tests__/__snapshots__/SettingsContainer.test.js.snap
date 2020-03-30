@@ -3,25 +3,21 @@
 exports[`SettingsContainer Settings closes on clicking x 1`] = `
 <SettingsContainer>
   <div>
-    <div
-      className="left-bottom"
+    <SettingsIcon
+      onClick={[Function]}
     >
-      <SettingsIcon
+      <a
+        id="settings-cog"
         onClick={[Function]}
       >
-        <a
-          id="settings-cog"
-          onClick={[Function]}
-        >
-          <img
-            alt="Settings"
-            height="35"
-            src="../../icons/settings-24px.svg"
-            width="35"
-          />
-        </a>
-      </SettingsIcon>
-    </div>
+        <img
+          alt="Settings"
+          height="35"
+          src="../../icons/settings-24px.svg"
+          width="35"
+        />
+      </a>
+    </SettingsIcon>
     <SettingsModal
       closeMenu={[Function]}
       handleWallpaperChange={[Function]}
@@ -90,25 +86,21 @@ exports[`SettingsContainer Settings closes on clicking x 1`] = `
 exports[`SettingsContainer Settings closes when clicking settings cog again 1`] = `
 <SettingsContainer>
   <div>
-    <div
-      className="left-bottom"
+    <SettingsIcon
+      onClick={[Function]}
     >
-      <SettingsIcon
+      <a
+        id="settings-cog"
         onClick={[Function]}
       >
-        <a
-          id="settings-cog"
-          onClick={[Function]}
-        >
-          <img
-            alt="Settings"
-            height="35"
-            src="../../icons/settings-24px.svg"
-            width="35"
-          />
-        </a>
-      </SettingsIcon>
-    </div>
+        <img
+          alt="Settings"
+          height="35"
+          src="../../icons/settings-24px.svg"
+          width="35"
+        />
+      </a>
+    </SettingsIcon>
     <SettingsModal
       closeMenu={[Function]}
       handleWallpaperChange={[Function]}
@@ -177,25 +169,21 @@ exports[`SettingsContainer Settings closes when clicking settings cog again 1`] 
 exports[`SettingsContainer Settings opens on click 1`] = `
 <SettingsContainer>
   <div>
-    <div
-      className="left-bottom"
+    <SettingsIcon
+      onClick={[Function]}
     >
-      <SettingsIcon
+      <a
+        id="settings-cog"
         onClick={[Function]}
       >
-        <a
-          id="settings-cog"
-          onClick={[Function]}
-        >
-          <img
-            alt="Settings"
-            height="35"
-            src="../../icons/settings-24px.svg"
-            width="35"
-          />
-        </a>
-      </SettingsIcon>
-    </div>
+        <img
+          alt="Settings"
+          height="35"
+          src="../../icons/settings-24px.svg"
+          width="35"
+        />
+      </a>
+    </SettingsIcon>
     <SettingsModal
       closeMenu={[Function]}
       handleWallpaperChange={[Function]}
